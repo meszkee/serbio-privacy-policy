@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serbio — Privacy Policy & Terms of Service</title>
+  <style>
+    :root {
+      --primary: #1CB0F6;
+      --primary-hover: #1899D6;
+      --primary-light: #E8F7FE;
+      --text-main: #2D3748;
+      --text-muted: #718096;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+      --accent: #58CC02;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 44px 36px;
+      border-radius: 24px;
+      border: 2px solid var(--border);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+    }
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 14px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    h1 {
+      font-size: 30px;
+      color: #1A202C;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    
+    /* Control Navigation */
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: #F1F5F9;
+      padding: 8px 12px;
+      border-radius: 16px;
+      margin-top: 16px;
+    }
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .tab-btn.active {
+      background: #FFFFFF;
+      color: var(--primary);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .lang-switcher {
+      display: flex;
+      gap: 6px;
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+    
+    /* Content Elements */
+    .doc-section {
+      display: none;
+      margin-top: 24px;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+    .doc-section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    h2 {
+      font-size: 21px;
+      color: #1A202C;
+      margin: 32px 0 12px 0;
+      padding-left: 12px;
+      border-left: 4px solid var(--primary);
+    }
+    p {
+      margin-bottom: 14px;
+      font-size: 15.5px;
+      color: #4A5568;
+    }
+    ul, ol {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #4A5568;
+    }
+    strong {
+      color: #2D3748;
+    }
+    .callout {
+      background: #F0F9FF;
+      border: 1px solid #BAE6FD;
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: #0369A1;
+    }
+    .callout strong {
+      color: #0284C7;
+    }
+    .badge-check {
+      display: inline-block;
+      background: #DCFCE7;
+      color: #15803D;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-right: 6px;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 28px 18px;
+      }
+      .controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .nav-tabs, .lang-switcher {
+        justify-content: center;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="brand-pill">🇷🇸 Serbio Mobile App</div>
+      <h1 id="page-title">Privacy Policy & Terms of Service</h1>
+      <p class="last-updated" id="last-updated-text">Effective Date: October 2026</p>
+      
+      <!-- Top Switchers -->
+      <div class="controls-bar">
+        <div class="nav-tabs">
+          <button class="tab-btn active" id="tab-privacy-btn" onclick="switchDoc('privacy')">🔒 Privacy Policy</button>
+          <button class="tab-btn" id="tab-terms-btn" onclick="switchDoc('terms')">📜 Terms of Service</button>
+        </div>
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="lang-en-btn" onclick="switchLang('en')">English</button>
+          <button class="lang-btn" id="lang-hu-btn" onclick="switchLang('hu')">Magyar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. PRIVACY POLICY - ENGLISH                -->
+    <!-- ========================================== -->
+    <div id="privacy-en" class="doc-section active">
+      <h2>1. Introduction</h2>
+      <p>Welcome to <strong>Serbio — Tanulj Szerbül</strong> ("we", "our", or "us"). We are dedicated to providing a high-quality Serbian language learning experience while fiercely protecting your personal privacy.</p>
+      <div class="callout">
+        <strong>✨ 100% Offline-First Guarantee:</strong> Serbio is engineered to operate fully offline. You can master vocabulary, take quizzes, listen to authentic pronunciations, and track your streaks without creating an account or sending data across the internet.
+      </div>
+
+      <h2>2. Information We Collect and Process</h2>
+      <ul>
+        <li><strong>Account Data (Optional):</strong> If you choose to register for cloud backup, we collect your email address and custom display name via Supabase to synchronize your XP, streaks, and unlocked nodes across multiple devices.</li>
+        <li><strong>Learning Progress:</strong> Completed lessons, review mistakes, and word mastery scores are stored primarily on your physical device using local storage (AsyncStorage).</li>
+        <li><strong>Microphone & Audio Access:</strong> <span class="badge-check">Zero Access</span> <strong>We DO NOT record, store, or transmit your voice or microphone audio.</strong> Serbio does not request runtime microphone permissions. All Serbian audio in the app consists of pre-packaged audio clips played directly to your device speaker.</li>
+        <li><strong>Background Services:</strong> <span class="badge-check">Zero Background Tasks</span> The application does not run background audio services or background location tracking when minimized.</li>
+      </ul>
+
+      <h2>3. Third-Party Integrations</h2>
+      <p>We work exclusively with trusted, GDPR-compliant service providers solely to power core features:</p>
+      <ul>
+        <li><strong>Supabase:</strong> Provides encrypted cloud database storage and authentication protected by Row-Level Security (RLS).</li>
+        <li><strong>Google AI (Gemini Flash):</strong> Powers on-demand conversational dialogue exercises and grammar explanations. Queries sent to Gemini contain only linguistic context and zero personal user identifiers.</li>
+        <li><strong>Expo / EAS:</strong> Delivers framework runtime updates and build distribution.</li>
+      </ul>
+
+      <h2>4. Data Storage and Security</h2>
+      <p>Your local data resides in your device's private sandboxed app directory. Network communications are secured with industry-standard TLS 1.3 encryption. We never sell, lease, or monetize your personal data with third-party data brokers or advertising networks.</p>
+
+      <h2>5. Children's Privacy</h2>
+      <p>Serbio does not knowingly collect personal identifiable information from children under 13. If you believe your child has submitted personal details through an account creation, please contact us for immediate removal.</p>
+
+      <h2>6. Right to Erasure & Account Deletion</h2>
+      <p>You maintain full control over your data. You may delete your account and all associated cloud-stored progress at any time directly through the app's Profile settings or by emailing our developer contact below.</p>
+
+      <h2>7. Contact Us</h2>
+      <p>For any inquiries or privacy-related questions, please contact the developer at:<br>
+      <strong>Developer:</strong> meszkee<br>
+      <strong>Email:</strong> <a href="mailto:meszkeee.dev@gmail.com">meszkeee.dev@gmail.com</a></p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. PRIVACY POLICY - MAGYAR                 -->
+    <!-- ========================================== -->
+    <div id="privacy-hu" class="doc-section">
+      <h2>1. Bevezetés</h2>
+      <p>Üdvözöljük a <strong>Serbio — Tanulj Szerbül</strong> mobilalkalmazásban! Célunk a leghatékonyabb, játékos szerb nyelvtanulás biztosítása a felhasználói magánszféra és adatok maximális védelme mellett.</p>
+      <div class="callout">
+        <strong>✨ 100% Offline-First elv:</strong> A Serbio offline működésre készült. A tananyag, a kvízek, a kiejtések és a tanulási széria teljes mértékben elérhető internetkapcsolat és fiókregisztráció nélkül is.
+      </div>
+
+      <h2>2. Kezelt adatok köre</h2>
+      <ul>
+        <li><strong>Fiókadatok (Opcionális):</strong> Amennyiben regisztrálsz a felhőalapú mentéshez, az e-mail címedet és a választott felhasználónevedet tároljuk a Supabase rendszerében az XP, széria és elvégzett leckék eszközök közötti szinkronizációjához.</li>
+        <li><strong>Tanulási haladás:</strong> A teljesített leckék és a szótárstatisztikák elsődlegesen a telefonod helyi memóriájában (AsyncStorage) tárolódnak.</li>
+        <li><strong>Mikrofon és hangfelvétel:</strong> <span class="badge-check">Nincs hozzáférés</span> <strong>Az alkalmazás NEM rögzít hangot és NEM használja a mikrofont.</strong> A kiejtést előre rögzített hangfájlok biztosítják a telefon hangszóróján keresztül.</li>
+        <li><strong>Háttérfolyamatok:</strong> Az applikáció nem futtat háttérben futó zenelejátszást vagy háttérbeli helymeghatározást.</li>
+      </ul>
+
+      <h2>3. Harmadik fél szolgáltatók</h2>
+      <p>Kizárólag megbízható, GDPR-megfelelő partnerekkel dolgozunk:</p>
+      <ul>
+        <li><strong>Supabase:</strong> Titkosított felhőadatbázis és hitelesítés Row-Level Security (RLS) adatvédelemmel.</li>
+        <li><strong>Google AI (Gemini Flash):</strong> Mesterséges intelligencia alapú nyelvtani magyarázatok és szituációs párbeszédek (kizárólag a feladat nyelvi szövegét dolgozza fel, személyes azonosítók nélkül).</li>
+        <li><strong>Expo / EAS:</strong> Keretrendszer- és frissítéskezelés.</li>
+      </ul>
+
+      <h2>4. Adatbiztonság</h2>
+      <p>Adataidat nem értékesítjük, nem adjuk bérbe és nem adjuk át hirdetési hálózatoknak. A hálózati kommunikáció titkosított HTTPS (TLS) protokollon keresztül zajlik.</p>
+
+      <h2>5. Fiók- és Adattörlés</h2>
+      <p>Bármikor jogosult vagy kérni fiókod és valamennyi kapcsolódó adatod végleges törlését közvetlenül a Profil beállításaiban vagy e-mailben az alábbi elérhetőségen.</p>
+
+      <h2>6. Kapcsolat</h2>
+      <p>Adatvédelmi kérdésekben közvetlenül a fejlesztőhöz fordulhatsz:<br>
+      <strong>Fejlesztő:</strong> meszkee<br>
+      <strong>E-mail:</strong> <a href="mailto:meszkeee.dev@gmail.com">meszkeee.dev@gmail.com</a></p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 3. TERMS OF SERVICE - ENGLISH              -->
+    <!-- ========================================== -->
+    <div id="terms-en" class="doc-section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using the <strong>Serbio</strong> mobile application, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the application.</p>
+
+      <h2>2. Description of Service</h2>
+      <p>Serbio is a gamified language learning mobile application designed to help users learn the Serbian language (Cyrillic and Latin scripts). Core educational content is provided for personal, non-commercial educational use.</p>
+
+      <h2>3. Intellectual Property Rights</h2>
+      <p>All curriculum content, vocabulary databases, character designs (including "Branko the Bear"), graphics, illustrations, and proprietary source code are the intellectual property of the developer (meszkee) and are protected by applicable copyright and trademark laws.</p>
+
+      <h2>4. Subscriptions & In-App Purchases (Serbio PRO)</h2>
+      <ul>
+        <li><strong>Free Tier:</strong> Serbio provides extensive offline access to lessons, dictionary, and quizzes at no cost.</li>
+        <li><strong>Optional PRO Subscription:</strong> Users may choose to upgrade to Serbio PRO for premium features (e.g., advanced AI conversational simulations, detailed AI grammar breakdowns, exclusive mascot skins).</li>
+        <li><strong>Billing & Cancellation:</strong> Subscriptions are processed through the Google Play Store billing platform. You may cancel your subscription at any time via your Google Play Account Settings. Upon cancellation, you retain PRO benefits until the end of your current billing cycle.</li>
+      </ul>
+
+      <h2>5. Disclaimer of Warranties</h2>
+      <p>Serbio is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive for absolute linguistic accuracy and technical stability, we do not guarantee that the service will be entirely error-free or uninterrupted.</p>
+
+      <h2>6. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, the developer shall not be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the application.</p>
+
+      <h2>7. Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms of Service at any time. Continued use of the application following any changes constitutes acceptance of the updated terms.</p>
+
+      <h2>8. Contact Information</h2>
+      <p>For questions regarding these Terms of Service, please contact:<br>
+      <strong>Email:</strong> <a href="mailto:meszkeee.dev@gmail.com">meszkeee.dev@gmail.com</a></p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 4. TERMS OF SERVICE - MAGYAR               -->
+    <!-- ========================================== -->
+    <div id="terms-hu" class="doc-section">
+      <h2>1. A Feltételek Elfogadása</h2>
+      <p>A <strong>Serbio</strong> mobilalkalmazás letöltésével, telepítésével és használatával elfogadod a jelen Felhasználási Feltételeket (ÁSZF). Amennyiben a feltételekkel nem értesz egyet, kérjük, mellőzd az applikáció használatát.</p>
+
+      <h2>2. A Szolgáltatás Leírása</h2>
+      <p>A Serbio egy játékosított szerb nyelvtanuló alkalmazás (A1–B2 szint, cirill és latin írásmód támogatással). Az alapvető tananyag magáncélú, oktatási célú használatra szolgál.</p>
+
+      <h2>3. Szellemi Tulajdonjogok</h2>
+      <p>A teljes tantervi tartalom, a szótár adatbázisa, a grafikai elemek, a kabalafigura (Branko, a tanulótárs maci) és a szoftver forráskódja a fejlesztő (meszkee) kizárólagos szellemi tulajdonát képezik.</p>
+
+      <h2>4. Előfizetések és Vásárlások (Serbio PRO)</h2>
+      <ul>
+        <li><strong>Ingyenes Alapverzió:</strong> A Serbio a tananyag és a szótár túlnyomó részét ingyenesen, offline módon elérhetővé teszi.</li>
+        <li><strong>Serbio PRO tagság:</strong> Választható prémium tagság, amely kényelmi és MI-funkciókat biztosít (AI szituációs chat, részletes nyelvtani magyarázatok, egyedi kabala kinézetek).</li>
+        <li><strong>Számlázás és Lemondás:</strong> Az előfizetések lebonyolítása a hivatalos Google Play Áruház rendszerén keresztül történik. Az előfizetés bármikor, kötelezettség nélkül lemondható a Google Play Fiók / Előfizetések menüpontban. Lemondás esetén a prémium funkciók a kifizetett időszak végéig aktívak maradnak.</li>
+      </ul>
+
+      <h2>5. Felelősségkorlátozás</h2>
+      <p>Az alkalmazás oktatási segédeszköz. Noha mindent megteszünk a pontos nyelvtani adatok és a folyamatos működés biztosításáért, nem vállalunk felelősséget az esetleges technikai hibákból vagy hálózati kimaradásokból eredő kellemetlenségekért.</p>
+
+      <h2>6. Kapcsolat</h2>
+      <p>Felhasználási feltételekkel kapcsolatos kérdésekben elérhetsz minket:<br>
+      <strong>E-mail:</strong> <a href="mailto:meszkeee.dev@gmail.com">meszkeee.dev@gmail.com</a></p>
+    </div>
+
+    <footer>
+      &copy; 2026 Serbio — Tanulj Szerbül. Minden jog fenntartva. | All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    let currentDoc = 'privacy';
+    let currentLang = 'en';
+
+    function updateView() {
+      // Hide all sections
+      const sections = document.querySelectorAll('.doc-section');
+      sections.forEach(sec => sec.classList.remove('active'));
+
+      // Show selected section
+      const activeId = `${currentDoc}-${currentLang}`;
+      const target = document.getElementById(activeId);
+      if (target) {
+        target.classList.add('active');
+      }
+
+      // Update Tab Buttons
+      document.getElementById('tab-privacy-btn').classList.toggle('active', currentDoc === 'privacy');
+      document.getElementById('tab-terms-btn').classList.toggle('active', currentDoc === 'terms');
+
+      // Update Lang Buttons
+      document.getElementById('lang-en-btn').classList.toggle('active', currentLang === 'en');
+      document.getElementById('lang-hu-btn').classList.toggle('active', currentLang === 'hu');
+
+      // Update Header Text based on language & doc
+      const titleEl = document.getElementById('page-title');
+      const updatedEl = document.getElementById('last-updated-text');
+      
+      if (currentLang === 'hu') {
+        titleEl.textContent = currentDoc === 'privacy' ? 'Adatvédelmi Nyilatkozat' : 'Felhasználási Feltételek (ÁSZF)';
+        updatedEl.textContent = 'Hatályos: 2026. október';
+      } else {
+        titleEl.textContent = currentDoc === 'privacy' ? 'Privacy Policy' : 'Terms of Service';
+        updatedEl.textContent = 'Effective Date: October 2026';
+      }
+    }
+
+    function switchDoc(docType) {
+      currentDoc = docType;
+      window.location.hash = docType;
+      updateView();
+    }
+
+    function switchLang(lang) {
+      currentLang = lang;
+      updateView();
+    }
+
+    // Handle direct anchor links (#terms, #privacy)
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.toLowerCase().replace('#', '');
+      if (hash === 'terms' || hash === 'aszf') {
+        currentDoc = 'terms';
+      } else {
+        currentDoc = 'privacy';
+      }
+      
+      // Auto-detect Hungarian browser language
+      const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (userLang.startsWith('hu')) {
+        currentLang = 'hu';
+      }
+      
+      updateView();
+    });
+  </script>
+</body>
+</html>
