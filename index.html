@@ -30,7 +30,7 @@
       padding: 32px 16px;
     }
     .container {
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto;
       background: var(--card-bg);
       padding: 44px 36px;
@@ -233,6 +233,7 @@
         <div class="lang-switcher">
           <button class="lang-btn active" id="lang-en-btn" onclick="switchLang('en')">English</button>
           <button class="lang-btn" id="lang-hu-btn" onclick="switchLang('hu')">Magyar</button>
+          <button class="lang-btn" id="lang-ru-btn" onclick="switchLang('ru')">Русский</button>
         </div>
       </div>
     </div>
@@ -317,7 +318,45 @@
     </div>
 
     <!-- ========================================== -->
-    <!-- 3. TERMS OF SERVICE - ENGLISH              -->
+    <!-- 3. PRIVACY POLICY - РУССКИЙ                -->
+    <!-- ========================================== -->
+    <div id="privacy-ru" class="doc-section">
+      <h2>1. Введение</h2>
+      <p>Добро пожаловать в мобильное приложение <strong>Serbio — Tanulj Szerbül</strong> («мы», «наш» или «нас»). Наша цель — предоставить качественное и увлекательное обучение сербскому языку при максимальной защите вашей конфиденциальности.</p>
+      <div class="callout">
+        <strong>✨ 100% Offline-First (Офлайн-гарантия):</strong> Serbio создано для полноценной работы без интернета. Вы можете изучать слова, проходить тесты, слушать аутентичное сербское произношение и вести серию дней без создания учетной записи и без передачи данных по сети.
+      </div>
+
+      <h2>2. Собираемая и обрабатываемая информация</h2>
+      <ul>
+        <li><strong>Данные учетной записи (необязательно):</strong> Если вы решите зарегистрироваться для резервного копирования в облаке, мы собираем ваш адрес электронной почты и имя пользователя через Supabase для синхронизации очков опыта (XP), серий дней и пройденных уроков между устройствами.</li>
+        <li><strong>Прогресс обучения:</strong> Пройденные уроки, ошибки и статистика словарного запаса хранятся локально на вашем устройстве (AsyncStorage).</li>
+        <li><strong>Микрофон и аудиозапись:</strong> <span class="badge-check">Нет доступа</span> <strong>Приложение НЕ записывает звук и НЕ передает ваш голос.</strong> В приложении нет обязательных разрешений на микрофон. Все аудиозаписи сербских слов и фраз воспроизводятся непосредственно из встроенных локальных файлов.</li>
+        <li><strong>Фоновые процессы:</strong> Приложение не выполняет фоновое воспроизведение звука и не отслеживает местоположение в фоновом режиме.</li>
+      </ul>
+
+      <h2>3. Сторонние интеграции</h2>
+      <p>Мы работаем исключительно с надежными сервисами, соответствующими стандартам GDPR:</p>
+      <ul>
+        <li><strong>Supabase:</strong> Зашифрованная база данных и аутентификация с защитой на уровне строк (Row-Level Security, RLS).</li>
+        <li><strong>Google AI (Gemini Flash):</strong> Интеллектуальные объяснения грамматики и ситуационные диалоги (обрабатывает только текст задания, без передачи личных данных пользователя).</li>
+        <li><strong>Expo / EAS:</strong> Доставка обновлений фреймворка и стабильность сборки.</li>
+      </ul>
+
+      <h2>4. Хранение и безопасность данных</h2>
+      <p>Локальные данные хранятся в изолированном каталоге приложения на вашем устройстве. Передача данных защищена протоколом шифрования TLS 1.3. Мы никогда не продаем и не передаем ваши данные рекламным сетям или брокерам данных.</p>
+
+      <h2>5. Удаление аккаунта и данных</h2>
+      <p>Вы имеете полное право в любой момент запросить удаление аккаунта и всех связанных с ним данных непосредственно в настройках Профиля или написав разработчику по указанному ниже адресу электронной почты.</p>
+
+      <h2>6. Контакты</h2>
+      <p>По любым вопросам конфиденциальности вы можете связаться с разработчиком:<br>
+      <strong>Разработчик:</strong> meszkee<br>
+      <strong>Email:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 4. TERMS OF SERVICE - ENGLISH              -->
     <!-- ========================================== -->
     <div id="terms-en" class="doc-section">
       <h2>1. Acceptance of Terms</h2>
@@ -351,7 +390,7 @@
     </div>
 
     <!-- ========================================== -->
-    <!-- 4. TERMS OF SERVICE - MAGYAR               -->
+    <!-- 5. TERMS OF SERVICE - MAGYAR               -->
     <!-- ========================================== -->
     <div id="terms-hu" class="doc-section">
       <h2>1. A Feltételek Elfogadása</h2>
@@ -378,8 +417,36 @@
       <strong>E-mail:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
     </div>
 
+    <!-- ========================================== -->
+    <!-- 6. TERMS OF SERVICE - РУССКИЙ              -->
+    <!-- ========================================== -->
+    <div id="terms-ru" class="doc-section">
+      <h2>1. Принятие условий</h2>
+      <p>Загружая, устанавливая или используя мобильное приложение <strong>Serbio</strong>, вы соглашаетесь с настоящими Условиями использования. Если вы не согласны с данными условиями, пожалуйста, воздержитесь от использования приложения.</p>
+
+      <h2>2. Описание услуги</h2>
+      <p>Serbio — это игровое мобильное приложение для изучения сербского языка (уровни A1–B2, поддержка кириллицы и латиницы). Образовательный контент предоставляется для личного некоммерческого использования.</p>
+
+      <h2>3. Интеллектуальная собственность</h2>
+      <p>Все учебные материалы, словарная база, графические элементы, талисман («Медвежонок Бранко») и программный код являются интеллектуальной собственностью разработчика (meszkee) и защищены законами об авторском праве.</p>
+
+      <h2>4. Подписки и покупки в приложении (Serbio PRO)</h2>
+      <ul>
+        <li><strong>Бесплатная версия:</strong> Serbio предоставляет доступ к основным урокам, словарю и упражнениям совершенно бесплатно и офлайн.</li>
+        <li><strong>Подписка Serbio PRO:</strong> Дополнительная премиум-подписка с расширенными возможностями (ситуационный ИИ-чат, подробные грамматические разборы, уникальные скины для Бранко).</li>
+        <li><strong>Оплата и отмена:</strong> Подписки обрабатываются через платежную систему Google Play. Вы можете отменить подписку в любое время в настройках аккаунта Google Play. При отмене доступ к функциям PRO сохраняется до конца текущего оплаченного периода.</li>
+      </ul>
+
+      <h2>5. Ограничение ответственности</h2>
+      <p>Приложение является образовательным инструментом. Мы стремимся к наивысшей грамматической точности и стабильности, однако не несем ответственности за возможные технические сбои или ошибки.</p>
+
+      <h2>6. Контакты</h2>
+      <p>По вопросам условий использования свяжитесь с нами:<br>
+      <strong>Email:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
+    </div>
+
     <footer>
-      &copy; 2026 Serbio — Tanulj Szerbül. Minden jog fenntartva. | All rights reserved.
+      &copy; 2026 Serbio — Tanulj Szerbül. Minden jog fenntartva. | All rights reserved. | Все права защищены.
     </footer>
   </div>
 
@@ -400,12 +467,27 @@
       }
 
       // Update Tab Buttons
-      document.getElementById('tab-privacy-btn').classList.toggle('active', currentDoc === 'privacy');
-      document.getElementById('tab-terms-btn').classList.toggle('active', currentDoc === 'terms');
+      const tabPrivacy = document.getElementById('tab-privacy-btn');
+      const tabTerms = document.getElementById('tab-terms-btn');
+      tabPrivacy.classList.toggle('active', currentDoc === 'privacy');
+      tabTerms.classList.toggle('active', currentDoc === 'terms');
+
+      // Update Tab Labels based on language
+      if (currentLang === 'hu') {
+        tabPrivacy.textContent = '🔒 Adatvédelem';
+        tabTerms.textContent = '📜 ÁSZF';
+      } else if (currentLang === 'ru') {
+        tabPrivacy.textContent = '🔒 Конфиденциальность';
+        tabTerms.textContent = '📜 Условия использования';
+      } else {
+        tabPrivacy.textContent = '🔒 Privacy Policy';
+        tabTerms.textContent = '📜 Terms of Service';
+      }
 
       // Update Lang Buttons
       document.getElementById('lang-en-btn').classList.toggle('active', currentLang === 'en');
       document.getElementById('lang-hu-btn').classList.toggle('active', currentLang === 'hu');
+      document.getElementById('lang-ru-btn').classList.toggle('active', currentLang === 'ru');
 
       // Update Header Text based on language & doc
       const titleEl = document.getElementById('page-title');
@@ -414,6 +496,9 @@
       if (currentLang === 'hu') {
         titleEl.textContent = currentDoc === 'privacy' ? 'Adatvédelmi Nyilatkozat' : 'Felhasználási Feltételek (ÁSZF)';
         updatedEl.textContent = 'Hatályos: 2026. október';
+      } else if (currentLang === 'ru') {
+        titleEl.textContent = currentDoc === 'privacy' ? 'Политика конфиденциальности' : 'Условия использования';
+        updatedEl.textContent = 'Дата вступления в силу: октябрь 2026 г.';
       } else {
         titleEl.textContent = currentDoc === 'privacy' ? 'Privacy Policy' : 'Terms of Service';
         updatedEl.textContent = 'Effective Date: October 2026';
@@ -434,16 +519,18 @@
     // Handle direct anchor links (#terms, #privacy)
     window.addEventListener('DOMContentLoaded', () => {
       const hash = window.location.hash.toLowerCase().replace('#', '');
-      if (hash === 'terms' || hash === 'aszf') {
+      if (hash === 'terms' || hash === 'aszf' || hash === 'usloviya') {
         currentDoc = 'terms';
       } else {
         currentDoc = 'privacy';
       }
       
-      // Auto-detect Hungarian browser language
+      // Auto-detect browser language
       const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
       if (userLang.startsWith('hu')) {
         currentLang = 'hu';
+      } else if (userLang.startsWith('ru')) {
+        currentLang = 'ru';
       }
       
       updateView();
