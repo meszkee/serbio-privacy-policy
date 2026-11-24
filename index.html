@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serbio — Privacy Policy & Terms of Service</title>
+  <title>Privacy Policy &amp; Terms of Service - Serbio</title>
   <meta name="google-site-verification" content="google5a0ad7470a84e2ff" />
   <style>
     :root {
       --primary: #1CB0F6;
-      --primary-hover: #1899D6;
-      --primary-light: #E8F7FE;
+      --primary-dark: #1899D6;
       --text-main: #2D3748;
-      --text-muted: #718096;
-      --bg: #F8FAFC;
+      --text-muted: #64748B;
+      --bg: #F7F9FA;
       --card-bg: #FFFFFF;
       --border: #E2E8F0;
-      --accent: #58CC02;
+      --highlight-bg: #F0F9FF;
+      --highlight-border: #BAE6FD;
+      --warn-bg: #FFFBEB;
+      --warn-border: #FDE68A;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     * {
       box-sizing: border-box;
@@ -27,514 +32,501 @@
       background-color: var(--bg);
       color: var(--text-main);
       line-height: 1.65;
-      padding: 32px 16px;
+      padding: 24px 16px;
     }
     .container {
       max-width: 860px;
       margin: 0 auto;
       background: var(--card-bg);
-      padding: 44px 36px;
-      border-radius: 24px;
+      padding: 40px 32px;
+      border-radius: 20px;
       border: 2px solid var(--border);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
     }
     .header {
       text-align: center;
       border-bottom: 2px solid var(--border);
-      padding-bottom: 28px;
-      margin-bottom: 28px;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
     }
-    .brand-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--primary-light);
-      color: var(--primary);
+    .logo-badge {
+      display: inline-block;
+      background: #E8F7FE;
+      color: var(--primary-dark);
       font-weight: 800;
-      font-size: 14px;
-      padding: 6px 16px;
-      border-radius: 999px;
-      margin-bottom: 14px;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 1px;
     }
     h1 {
-      font-size: 30px;
-      color: #1A202C;
-      font-weight: 800;
-      margin-bottom: 6px;
+      font-size: 26px;
+      color: #0F172A;
+      margin-bottom: 8px;
     }
-    .last-updated {
+    .effective-date {
       color: var(--text-muted);
       font-size: 14px;
-      margin-bottom: 20px;
     }
-    
-    /* Control Navigation */
-    .controls-bar {
+    .lang-switch {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      background: #F1F5F9;
-      padding: 8px 12px;
-      border-radius: 16px;
-      margin-top: 16px;
-    }
-    .nav-tabs {
-      display: flex;
-      gap: 8px;
-    }
-    .tab-btn {
-      background: transparent;
-      border: none;
-      padding: 8px 18px;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text-muted);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .tab-btn.active {
-      background: #FFFFFF;
-      color: var(--primary);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    }
-    .lang-switcher {
-      display: flex;
-      gap: 6px;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
     }
     .lang-btn {
-      background: transparent;
-      border: 1px solid transparent;
-      padding: 6px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 7px 16px;
+      border-radius: 20px;
       font-size: 13px;
       font-weight: 700;
-      color: var(--text-muted);
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.2s ease;
+      color: var(--text-main);
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
     }
-    .lang-btn.active {
+    .lang-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+    .lang-btn.primary {
       background: var(--primary);
       color: #FFFFFF;
+      border-color: var(--primary);
     }
-    
-    /* Content Elements */
-    .doc-section {
-      display: none;
-      margin-top: 24px;
-      animation: fadeIn 0.25s ease-in-out;
+    .lang-btn.primary:hover {
+      background: var(--primary-dark);
+      color: #FFFFFF;
     }
-    .doc-section.active {
-      display: block;
+    section {
+      scroll-margin-top: 20px;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(4px); }
-      to { opacity: 1; transform: translateY(0); }
+    .section-kicker {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary-dark);
+      background: #E8F7FE;
+      padding: 4px 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
     }
-    
     h2 {
-      font-size: 21px;
-      color: #1A202C;
-      margin: 32px 0 12px 0;
-      padding-left: 12px;
+      font-size: 20px;
+      color: #0F172A;
+      margin: 26px 0 12px 0;
       border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+    h3 {
+      font-size: 16px;
+      color: #1E293B;
+      margin: 18px 0 8px 0;
     }
     p {
       margin-bottom: 14px;
-      font-size: 15.5px;
-      color: #4A5568;
+      font-size: 15px;
     }
-    ul, ol {
-      margin-left: 24px;
+    ul {
+      margin-left: 20px;
       margin-bottom: 16px;
     }
     li {
       margin-bottom: 8px;
       font-size: 15px;
-      color: #4A5568;
     }
-    strong {
-      color: #2D3748;
+    code {
+      background: #F1F5F9;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: 13.5px;
+      color: #0F172A;
     }
-    .callout {
-      background: #F0F9FF;
-      border: 1px solid #BAE6FD;
-      border-radius: 14px;
-      padding: 16px 20px;
-      margin: 20px 0;
-      font-size: 15px;
-      color: #0369A1;
+    .highlight-box {
+      background: var(--highlight-bg);
+      border: 1px solid var(--highlight-border);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 16px 0;
+      font-size: 14.5px;
     }
-    .callout strong {
-      color: #0284C7;
+    .notice-box {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 16px 0;
+      font-size: 14.5px;
     }
-    .badge-check {
-      display: inline-block;
-      background: #DCFCE7;
-      color: #15803D;
-      font-size: 12px;
+    .table-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: #F8FAFC;
       font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
-      margin-right: 6px;
+      color: #0F172A;
     }
-    
+    tr:last-child td {
+      border-bottom: none;
+    }
+    hr.divider {
+      margin: 44px 0;
+      border: none;
+      border-top: 2px dashed var(--border);
+    }
     footer {
       text-align: center;
-      margin-top: 48px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
+      margin-top: 40px;
       font-size: 13px;
       color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
     }
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 640px) {
+    @media (max-width: 600px) {
       .container {
-        padding: 28px 18px;
-      }
-      .controls-bar {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .nav-tabs, .lang-switcher {
-        justify-content: center;
+        padding: 24px 18px;
       }
       h1 {
-        font-size: 24px;
+        font-size: 22px;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <div class="header">
-      <div class="brand-pill">🇷🇸 Serbio Mobile App</div>
-      <h1 id="page-title">Privacy Policy & Terms of Service</h1>
-      <p class="last-updated" id="last-updated-text">Effective Date: October 2026</p>
-      
-      <!-- Top Switchers -->
-      <div class="controls-bar">
-        <div class="nav-tabs">
-          <button class="tab-btn active" id="tab-privacy-btn" onclick="switchDoc('privacy')">🔒 Privacy Policy</button>
-          <button class="tab-btn" id="tab-terms-btn" onclick="switchDoc('terms')">📜 Terms of Service</button>
-        </div>
-        <div class="lang-switcher">
-          <button class="lang-btn active" id="lang-en-btn" onclick="switchLang('en')">English</button>
-          <button class="lang-btn" id="lang-hu-btn" onclick="switchLang('hu')">Magyar</button>
-          <button class="lang-btn" id="lang-ru-btn" onclick="switchLang('ru')">Русский</button>
-        </div>
-      </div>
-    </div>
+    <header class="header">
+      <div class="logo-badge">Serbio Mobile App</div>
+      <h1>Privacy Policy &amp; Terms of Service<br>Adatvédelmi Nyilatkozat &amp; ÁSZF</h1>
+      <p class="effective-date">
+        Effective Date: November 24, 2026 &nbsp;|&nbsp;
+        Hatályos: 2026. november 24. &nbsp;|&nbsp;
+        Действует с: 24 ноября 2026 г.
+      </p>
+      <nav class="lang-switch" aria-label="Language and section navigation">
+        <a href="#english" class="lang-btn primary">English</a>
+        <a href="#magyar" class="lang-btn">Magyar</a>
+        <a href="#russian" class="lang-btn">Русский</a>
+        <a href="#terms" class="lang-btn">Terms / ÁSZF / Условия</a>
+      </nav>
+    </header>
 
-    <!-- ========================================== -->
-    <!-- 1. PRIVACY POLICY - ENGLISH                -->
-    <!-- ========================================== -->
-    <div id="privacy-en" class="doc-section active">
+    <!-- ENGLISH SECTION -->
+    <section id="english" lang="en">
+      <span class="section-kicker">English — Privacy Policy</span>
+
       <h2>1. Introduction</h2>
-      <p>Welcome to <strong>Serbio — Tanulj Szerbül</strong> ("we", "our", or "us"). We are dedicated to providing a high-quality Serbian language learning experience while fiercely protecting your personal privacy.</p>
-      <div class="callout">
-        <strong>✨ 100% Offline-First Guarantee:</strong> Serbio is engineered to operate fully offline. You can master vocabulary, take quizzes, listen to authentic pronunciations, and track your streaks without creating an account or sending data across the internet.
+      <p>Welcome to <strong>Serbio</strong> ("we", "our", or "us", developed by <strong>meszkee</strong>). We are committed to protecting your privacy and explaining transparently how our mobile application handles user data.</p>
+      <div class="highlight-box">
+        <strong>Offline-First Promise:</strong> Serbio is built with an offline-first architecture. You can learn Serbian, complete lessons, practice Cyrillic Azbuka and Padeži cases, listen to pre-recorded Branko audio, and track your progress 100% offline in guest mode without creating an account.
       </div>
 
-      <h2>2. Information We Collect and Process</h2>
+      <h2>2. Data We Collect and Why</h2>
       <ul>
-        <li><strong>Account Data (Optional):</strong> If you choose to register for cloud backup, we collect your email address and custom display name via Supabase to synchronize your XP, streaks, and unlocked nodes across multiple devices.</li>
-        <li><strong>Learning Progress:</strong> Completed lessons, review mistakes, and word mastery scores are stored primarily on your physical device using local storage (AsyncStorage).</li>
-        <li><strong>Microphone & Audio Access:</strong> <span class="badge-check">Zero Access</span> <strong>We DO NOT record, store, or transmit your voice or microphone audio.</strong> Serbio does not request runtime microphone permissions. All Serbian audio in the app consists of pre-packaged audio clips played directly to your device speaker.</li>
-        <li><strong>Background Services:</strong> <span class="badge-check">Zero Background Tasks</span> The application does not run background audio services or background location tracking when minimized.</li>
+        <li><strong>Local Device Storage:</strong> Completed lessons, vocabulary mastery, Cyrillic &amp; Padeži mastery, XP, streaks, active dates, streak freezes, daily quests, hearts, daily AI credit counters, language/script preferences, avatar pose, reminder settings, and a randomly generated anonymous device ID are stored locally on your device via <code>@react-native-async-storage/async-storage</code>.</li>
+        <li><strong>Optional Account, Social &amp; Leaderboards (Supabase):</strong> If you optionally sign up or sign in using Email &amp; Password or Google Sign-In (OAuth), we collect your <strong>email address</strong> strictly for authentication and account recovery (never shown publicly). New Google OAuth accounts receive a generic temporary handle (e.g., <code>tanulo_...</code>) instead of exposing your email. Your chosen <code>@username</code>, display name, Branko mascot pose, total XP, weekly XP, streak, and PRO badge may appear on the global, weekly, and friend leaderboards. Your completed lessons, vocabulary mastery, active dates, daily goal, and friendships sync to Supabase Postgres.</li>
+        <li><strong>Microphone &amp; Optional Speech Recognition:</strong> Serbio offers <strong>optional speaking/pronunciation exercises</strong> powered by your device's native speech recognition (<code>expo-speech-recognition</code>: Android SpeechRecognizer / iOS SFSpeechRecognizer). Microphone and speech-recognition permissions are requested <strong>only when you tap the microphone button</strong> in a speaking exercise, and you may skip or mute speaking exercises at any time. <strong>Serbio does not record, save, or upload voice audio.</strong> Speech-to-text is processed ephemerally by your OS speech provider (Google/Apple under their privacy policies) to return recognized text for local evaluation. Background recording and foreground media services remain disabled.</li>
+        <li><strong>AI Explanations &amp; Situational Roleplay (Google Gemini via Proxy):</strong> On-demand grammar explanations and situational roleplay chats use Google Gemini Flash Lite via our Supabase Edge Function proxy (<code>gemini-proxy</code>). Only the exercise/chat prompt, brief conversation context, and language/script preferences are sent. Our proxy transiently verifies your auth token (if signed in) or IP address for authorization and rate limiting; <strong>no email, real name, or account profile details are forwarded to Google Gemini</strong>, and AI chat transcripts are not stored on our servers. Please avoid entering sensitive personal details in roleplay chats. Offline rule/decision-tree fallbacks work without internet.</li>
+        <li><strong>In-App Subscriptions (Serbio PRO):</strong> Optional PRO plans (monthly, annual, lifetime) are billed by Google Play or Apple App Store and managed through RevenueCat. Serbio never sees or stores payment card information. RevenueCat receives an anonymous or Supabase user ID and store receipt data to verify entitlements; Supabase stores only your PRO flag, plan type, expiration timestamp, and auto-renewal status.</li>
+        <li><strong>Analytics &amp; Diagnostic Error Logs:</strong> We use <strong>PostHog</strong> (<code>us.i.posthog.com</code>) for usage and funnel analytics (app opens, lesson starts/completions/drop-offs, exercise accuracy, speaking score/skip flags—never audio—placement tests, paywall actions, streaks, review prompts, and share triggers), linked to your internal Supabase user ID, <code>@username</code>, and display name when signed in (reset on sign-out). Warning/error diagnostics (message, category, OS/app version, anonymous device ID, and user ID if signed in) are logged to Supabase <code>app_error_logs</code> (queued offline up to 100 entries if disconnected) solely for debugging and stability.</li>
+        <li><strong>Notifications &amp; Native Sharing:</strong> Optional daily streak reminders are scheduled 100% locally on your device via <code>expo-notifications</code> (no remote push server). Native sharing uses your OS share sheet; review links open Google Play.</li>
+        <li><strong>No Ads &amp; Unused Permissions:</strong> Serbio has <strong>no third-party ads</strong>, never sells or rents personal data, and never requests GPS/location, camera, photos, or contacts permissions.</li>
       </ul>
 
-      <h2>3. Third-Party Integrations</h2>
-      <p>We work exclusively with trusted, GDPR-compliant service providers solely to power core features:</p>
-      <ul>
-        <li><strong>Supabase:</strong> Provides encrypted cloud database storage and authentication protected by Row-Level Security (RLS).</li>
-        <li><strong>Google AI (Gemini Flash):</strong> Powers on-demand conversational dialogue exercises and grammar explanations. Queries sent to Gemini contain only linguistic context and zero personal user identifiers.</li>
-        <li><strong>Expo / EAS:</strong> Delivers framework runtime updates and build distribution.</li>
-      </ul>
+      <h2>3. Third-Party Service Providers</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Purpose</th>
+              <th>Data Handled</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Supabase</strong></td>
+              <td>Auth, Postgres DB (RLS), AI proxy, error logs</td>
+              <td>Email (auth), public profile/progress, friendships, PRO status, error logs, transient proxy rate-limit check</td>
+            </tr>
+            <tr>
+              <td><strong>Google LLC</strong></td>
+              <td>Google OAuth, Gemini AI (via proxy), Google Play Billing, Android Speech Recognition</td>
+              <td>OAuth email/ID, prompt/chat text (no account PII), billing receipts, ephemeral speech recognition</td>
+            </tr>
+            <tr>
+              <td><strong>RevenueCat</strong></td>
+              <td>Subscription entitlement verification</td>
+              <td>Anonymous or Supabase user ID, store purchase receipts/status</td>
+            </tr>
+            <tr>
+              <td><strong>PostHog</strong></td>
+              <td>Product &amp; funnel analytics</td>
+              <td>Usage events, internal user ID, username &amp; display name (when signed in)</td>
+            </tr>
+            <tr>
+              <td><strong>Expo / EAS</strong></td>
+              <td>App build &amp; Over-The-Air (OTA) updates</td>
+              <td>App runtime version and platform check during update requests</td>
+            </tr>
+            <tr>
+              <td><strong>Apple Inc.</strong></td>
+              <td>iOS App Store billing &amp; SFSpeechRecognizer (on iOS)</td>
+              <td>Store purchase validation, ephemeral speech recognition</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2>4. Data Storage and Security</h2>
-      <p>Your local data resides in your device's private sandboxed app directory. Network communications are secured with industry-standard TLS 1.3 encryption. We never sell, lease, or monetize your personal data with third-party data brokers or advertising networks.</p>
+      <h2>4. Data Security, Retention &amp; GDPR Rights</h2>
+      <p>All network traffic is encrypted in transit (HTTPS/TLS). Cloud records are protected by Supabase Row-Level Security (RLS) and hardened server-side RPCs. Account and progress data are retained while your account is active and erased on deletion; diagnostic logs and analytics are retained only as long as needed for stability and product improvement.</p>
+      <p>Under GDPR and applicable privacy laws, you may request access, correction (username/display name can also be edited in-app), deletion, portability, or restriction of your data by emailing <code>learnserbianwithbranko@gmail.com</code>.</p>
 
-      <h2>5. Children's Privacy</h2>
-      <p>Serbio does not knowingly collect personal identifiable information from children under 13. If you believe your child has submitted personal details through an account creation, please contact us for immediate removal.</p>
+      <h2>5. Account &amp; Data Deletion</h2>
+      <p>You can permanently delete your account and cloud data anytime via <strong>Profile → Settings → Permanently delete account</strong> (which immediately erases your Supabase auth record, cloud profile, progress, leaderboard entry, and friendships, and clears local cached auth data) or by emailing <code>learnserbianwithbranko@gmail.com</code> from your registered address (processed within 30 days).</p>
+      <div class="notice-box">
+        <strong>Subscription Reminder:</strong> Deleting your Serbio account does <strong>not</strong> automatically cancel active Google Play or Apple App Store subscriptions. Please cancel active subscriptions directly in your Google Play or App Store settings.
+      </div>
 
-      <h2>6. Right to Erasure & Account Deletion</h2>
-      <p>You maintain full control over your data. You may delete your account and all associated cloud-stored progress at any time directly through the app's Profile settings or by emailing our developer contact below.</p>
+      <h2>6. Children's Privacy</h2>
+      <p>Serbio is not directed to children under 13 (or under 16 in the EEA where parental consent is required under GDPR). We do not knowingly collect personal identifiable information from children. If you believe a child has provided personal data to us, contact <code>learnserbianwithbranko@gmail.com</code> and we will promptly delete it.</p>
 
       <h2>7. Contact Us</h2>
-      <p>For any inquiries or privacy-related questions, please contact the developer at:<br>
-      <strong>Developer:</strong> meszkee<br>
-      <strong>Email:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
-    </div>
+      <p>For privacy questions or requests, contact developer <strong>meszkee</strong> at:<br>
+      <strong>Email:</strong> <code>learnserbianwithbranko@gmail.com</code></p>
+    </section>
 
-    <!-- ========================================== -->
-    <!-- 2. PRIVACY POLICY - MAGYAR                 -->
-    <!-- ========================================== -->
-    <div id="privacy-hu" class="doc-section">
+    <hr class="divider">
+
+    <!-- HUNGARIAN SECTION -->
+    <section id="magyar" lang="hu">
+      <span class="section-kicker">Magyar — Adatvédelmi Tájékoztató</span>
+
       <h2>1. Bevezetés</h2>
-      <p>Üdvözöljük a <strong>Serbio — Tanulj Szerbül</strong> mobilalkalmazásban! Célunk a leghatékonyabb, játékos szerb nyelvtanulás biztosítása a felhasználói magánszféra és adatok maximális védelme mellett.</p>
-      <div class="callout">
-        <strong>✨ 100% Offline-First elv:</strong> A Serbio offline működésre készült. A tananyag, a kvízek, a kiejtések és a tanulási széria teljes mértékben elérhető internetkapcsolat és fiókregisztráció nélkül is.
+      <p>Üdvözlünk a <strong>Serbio</strong> alkalmazásban (fejlesztő: <strong>meszkee</strong>)! Elkötelezettek vagyunk a személyes adataid védelme és az átlátható adatkezelés mellett.</p>
+      <div class="highlight-box">
+        <strong>Offline-First ígéret:</strong> A Serbio offline-first architektúrával készült. A leckék, kvízek, a Cirill Azbuka és Padeži trénerek, az előre rögzített Branko hanganyagok, a napi küldetések és a haladás követése 100%-ban elérhető internet és fiókregisztráció nélkül, vendég módban is.
       </div>
 
-      <h2>2. Kezelt adatok köre</h2>
+      <h2>2. Kezelt adatok köre és célja</h2>
       <ul>
-        <li><strong>Fiókadatok (Opcionális):</strong> Amennyiben regisztrálsz a felhőalapú mentéshez, az e-mail címedet és a választott felhasználónevedet tároljuk a Supabase rendszerében az XP, széria és elvégzett leckék eszközök közötti szinkronizációjához.</li>
-        <li><strong>Tanulási haladás:</strong> A teljesített leckék és a szótárstatisztikák elsődlegesen a telefonod helyi memóriájában (AsyncStorage) tárolódnak.</li>
-        <li><strong>Mikrofon és hangfelvétel:</strong> <span class="badge-check">Nincs hozzáférés</span> <strong>Az alkalmazás NEM rögzít hangot és NEM használja a mikrofont.</strong> A kiejtést előre rögzített hangfájlok biztosítják a telefon hangszóróján keresztül.</li>
-        <li><strong>Háttérfolyamatok:</strong> Az applikáció nem futtat háttérben futó zenelejátszást vagy háttérbeli helymeghatározást.</li>
+        <li><strong>Helyi eszköz-tárhely:</strong> Az elvégzett leckék, a szókincs-, cirill- és esetragozási előrehaladás, az XP, a széria, az aktív napok, a széria-fagyasztások, a napi küldetések, az életek, a napi AI kredit-számláló, a nyelvi/írásmód-beállítások, a Branko avatar, az emlékeztető beállítások és egy véletlenszerűen generált anonim eszközazonosító helyileg tárolódik a készülékeden (<code>@react-native-async-storage/async-storage</code>).</li>
+        <li><strong>Opcionális fiók, közösségi funkciók és ranglista (Supabase):</strong> E-mail + jelszó vagy Google Bejelentkezés (OAuth) használatakor az <strong>e-mail címedet</strong> kizárólag hitelesítésre, jelszó-visszaállításra és fióktörlésre használjuk (nyilvánosan soha nem látható; új Google OAuth fióknál automatikusan semleges ideiglenes azonosító, pl. <code>tanulo_...</code> készül). A választott <code>@felhasználónév</code>, megjelenített név, Branko kinézet, összesített és heti XP, széria és PRO jelvény megjelenhet a globális, heti és baráti ranglistán. A leckék, szótárhaladás, aktív napok, napi cél és baráti kapcsolatok szinkronizálódnak a Supabase adatbázisba.</li>
+        <li><strong>Mikrofon és opcionális beszédfelismerés:</strong> A Serbio <strong>opcionális kiejtési (beszéd) feladatokat</strong> tartalmaz a készülék natív beszédfelismerőjével (<code>expo-speech-recognition</code>: Android SpeechRecognizer / iOS SFSpeechRecognizer). A mikrofon- és beszédfelismerési engedélyt az app <strong>kizárólag akkor kéri, amikor megnyomod a mikrofon gombot</strong> egy beszédfeladatban; a beszédfeladatok bármikor átugorhatók vagy elnémíthatók. <strong>A Serbio NEM rögzít, NEM ment el és NEM tölt fel hangfelvételt.</strong> A hang–szöveg átírást a telefon operációs rendszerének beszédfelismerője (Google / Apple saját adatvédelmi szabályzata szerint) végzi el ideiglenesen a helyi kiértékeléshez. A háttérben történő hangrögzítés és média-szolgáltatás le van tiltva.</li>
+        <li><strong>AI nyelvtani magyarázatok és szituációs párbeszédek (Google Gemini proxy-n keresztül):</strong> A feladatkéréskor elindított AI magyarázatok és kávézós/hétköznapi párbeszédek a Google Gemini Flash Lite modelljét használják a saját Supabase Edge Function proxy-nkon (<code>gemini-proxy</code>) keresztül. Csak a feladat kontextusa, a válaszod/üzeneted és a nyelvi/írásmód beállítás kerül továbbításra. A proxy a hitelesítés és a percalapú terhelésvédelem céljából átmenetileg ellenőrizheti a Supabase munkamenet-tokent vagy IP-címet, de <strong>e-mail cím, valódi név vagy fiókadat nem kerül továbbításra a Google Gemini felé</strong>, és a beszélgetések nem tárolódnak a szervereinken. Kérjük, érzékeny személyes adatot ne írj az AI chatbe. Offline módban vagy elfogyott krediteknél beépített offline szabálymotor és döntési fa működik.</li>
+        <li><strong>Alkalmazáson belüli előfizetések (Serbio PRO):</strong> A PRO csomagok (havi, éves, örökös) fizetését a Google Play vagy az Apple App Store kezeli a RevenueCat integráción keresztül. Bankkártya-adatokat a Serbio nem lát és nem tárol. A RevenueCat anonim vagy Supabase user ID-t és áruházi nyugtát kezel a jogosultság ellenőrzéséhez; a Supabase csak a PRO státuszt, csomagtípust, lejáratot és megújulási állapotot menti.</li>
+        <li><strong>Használati analitika és hibanaplózás:</strong> A <strong>PostHog</strong> (<code>us.i.posthog.com</code>) névtelenített/funkcionális használati eseményeket gyűjt (app megnyitás, lecke indítás/befejezés/félbehagyás, feladattípus-pontosság, beszédfeladat pontszám/átugrás — hanganyag nélkül — szintfelmérő, előfizetési képernyő, széria, értékelő ablak, megosztás). Bejelentkezett fióknál a belső Supabase ID, <code>@felhasználónév</code> és megjelenített név kapcsolódik hozzá (e-mail és jelszó nélkül; kijelentkezéskor törlődik). A figyelmeztetések és hibák diagnosztikája (üzenet, kategória, OS/app verzió, véletlenszerű eszközazonosító, belépett felhasználónál user ID) a Supabase <code>app_error_logs</code> táblába kerül (offline legfeljebb 100 napló várakozik helyben).</li>
+        <li><strong>Értesítések és megosztás:</strong> Az opcionális esti széria-emlékeztetők 100%-ban helyileg, a telefonon ütemeződnek (<code>expo-notifications</code>, külső push szerver nélkül). A megosztás a rendszer natív megosztó lapját használja; az értékelés a Google Play áruházi oldalra nyit.</li>
+        <li><strong>Hirdetésmentesség és nem használt engedélyek:</strong> A Serbio <strong>nem tartalmaz harmadik féltől származó reklámokat</strong>, soha nem ad el adatokat, és nem kér hozzáférést helymeghatározáshoz (GPS), kamerához, fotókhoz vagy névjegyekhez.</li>
       </ul>
 
       <h2>3. Harmadik fél szolgáltatók</h2>
-      <p>Kizárólag megbízható, GDPR-megfelelő partnerekkel dolgozunk:</p>
-      <ul>
-        <li><strong>Supabase:</strong> Titkosított felhőadatbázis és hitelesítés Row-Level Security (RLS) adatvédelemmel.</li>
-        <li><strong>Google AI (Gemini Flash):</strong> Mesterséges intelligencia alapú nyelvtani magyarázatok és szituációs párbeszédek (kizárólag a feladat nyelvi szövegét dolgozza fel, személyes azonosítók nélkül).</li>
-        <li><strong>Expo / EAS:</strong> Keretrendszer- és frissítéskezelés.</li>
-      </ul>
-
-      <h2>4. Adatbiztonság</h2>
-      <p>Adataidat nem értékesítjük, nem adjuk bérbe és nem adjuk át hirdetési hálózatoknak. A hálózati kommunikáció titkosított HTTPS (TLS) protokollon keresztül zajlik.</p>
-
-      <h2>5. Fiók- és Adattörlés</h2>
-      <p>Bármikor jogosult vagy kérni fiókod és valamennyi kapcsolódó adatod végleges törlését közvetlenül a Profil beállításaiban vagy e-mailben az alábbi elérhetőségen.</p>
-
-      <h2>6. Kapcsolat</h2>
-      <p>Adatvédelmi kérdésekben közvetlenül a fejlesztőhöz fordulhatsz:<br>
-      <strong>Fejlesztő:</strong> meszkee<br>
-      <strong>E-mail:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
-    </div>
-
-    <!-- ========================================== -->
-    <!-- 3. PRIVACY POLICY - РУССКИЙ                -->
-    <!-- ========================================== -->
-    <div id="privacy-ru" class="doc-section">
-      <h2>1. Введение</h2>
-      <p>Добро пожаловать в мобильное приложение <strong>Serbio — Tanulj Szerbül</strong> («мы», «наш» или «нас»). Наша цель — предоставить качественное и увлекательное обучение сербскому языку при максимальной защите вашей конфиденциальности.</p>
-      <div class="callout">
-        <strong>✨ 100% Offline-First (Офлайн-гарантия):</strong> Serbio создано для полноценной работы без интернета. Вы можете изучать слова, проходить тесты, слушать аутентичное сербское произношение и вести серию дней без создания учетной записи и без передачи данных по сети.
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Szolgáltató</th>
+              <th>Cél</th>
+              <th>Kezelt adatok</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Supabase</strong></td>
+              <td>Hitelesítés, Postgres adatbázis (RLS), AI proxy, hibanaplók</td>
+              <td>E-mail (auth), profil/haladás, barátok, PRO státusz, hibanaplók, átmeneti proxy jogosultság-ellenőrzés</td>
+            </tr>
+            <tr>
+              <td><strong>Google LLC</strong></td>
+              <td>Google OAuth, Gemini AI (proxy-n át), Google Play számlázás, Android beszédfelismerés</td>
+              <td>OAuth azonosító/e-mail, feladat/chat szöveg (fiók-PII nélkül), vásárlási nyugták, ideiglenes beszédfelismerés</td>
+            </tr>
+            <tr>
+              <td><strong>RevenueCat</strong></td>
+              <td>Előfizetési jogosultságok kezelése</td>
+              <td>Anonim vagy Supabase user ID, áruházi vásárlási állapot/nyugta</td>
+            </tr>
+            <tr>
+              <td><strong>PostHog</strong></td>
+              <td>Termékanalitika és hibakeresési tölcsérek</td>
+              <td>Használati események, belépéskor belső user ID, felhasználónév és megjelenített név</td>
+            </tr>
+            <tr>
+              <td><strong>Expo / EAS</strong></td>
+              <td>Alkalmazás-build és Over-The-Air (OTA) frissítések</td>
+              <td>Verzió- és platformadatok frissítés-ellenőrzéskor</td>
+            </tr>
+            <tr>
+              <td><strong>Apple Inc.</strong></td>
+              <td>iOS App Store fizetés és SFSpeechRecognizer (iOS esetén)</td>
+              <td>Vásárlás-ellenőrzés, ideiglenes beszédfelismerés</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <h2>2. Собираемая и обрабатываемая информация</h2>
+      <h2>4. Adatbiztonság, megőrzés és GDPR jogok</h2>
+      <p>Minden hálózati kommunikáció titkosított csatornán (HTTPS/TLS) zajlik, a felhőadatokat Supabase Row-Level Security (RLS) szabályok és védett szerveroldali függvények óvják. A fiókadatokat a fiók fennállásáig tároljuk és törléskor eltávolítjuk; a diagnosztikai naplókat és analitikát csak a stabilitás és fejlesztés érdekében szükséges ideig őrizzük meg.</p>
+      <p>A GDPR alapján jogod van adathozzáféréshez, helyesbítéshez (a felhasználónév és név az appban is módosítható), törléshez, adathordozhatósághoz és tiltakozáshoz a <code>learnserbianwithbranko@gmail.com</code> címen.</p>
+
+      <h2>5. Fiók és adatok végleges törlése</h2>
+      <p>Fiókodat és felhős adataidat bármikor véglegesen törölheted az alkalmazáson belül a <strong>Profil → Beállítások → Fiók végleges törlése</strong> gombbal (azonnal törli a hitelesítési fiókot, profilt, haladást, ranglista-adatokat és barátokat, valamint a helyi gyorsítótárat), vagy e-mailben a regisztrált címről a <code>learnserbianwithbranko@gmail.com</code> címre írva (legfeljebb 30 napon belül teljesítjük).</p>
+      <div class="notice-box">
+        <strong>Előfizetési figyelmeztetés:</strong> A Serbio fiók törlése <strong>nem mondja le automatikusan</strong> a Google Play vagy az Apple App Store rendszerében aktív előfizetést. Az előfizetést külön kell lemondanod az áruház előfizetés-kezelőjében.
+      </div>
+
+      <h2>6. Gyermekek védelme</h2>
+      <p>A Serbio nem 13 év alatti (az EGT területén szülői hozzájárulás nélkül 16 év alatti) gyermekeknek szól, és tudatosan nem gyűjt tőlük személyes adatot. Az app regisztráció nélkül, offline vendég módban is teljes értékűen használható. Ha gyermek személyes adatot adott meg, kérjük jelezd a <code>learnserbianwithbranko@gmail.com</code> címen, és azonnal töröljük.</p>
+
+      <h2>7. Kapcsolat</h2>
+      <p>Adatvédelemmel kapcsolatos kérdésekben fordulj a fejlesztőhöz (<strong>meszkee</strong>):<br>
+      <strong>E-mail:</strong> <code>learnserbianwithbranko@gmail.com</code></p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- RUSSIAN SECTION -->
+    <section id="russian" lang="ru">
+      <span class="section-kicker">Русский — Политика конфиденциальности</span>
+
+      <h2>1. Введение</h2>
+      <p>Добро пожаловать в приложение <strong>Serbio</strong> (разработчик: <strong>meszkee</strong>). Мы уважаем вашу конфиденциальность и открыто описываем порядок обработки данных.</p>
+      <div class="highlight-box">
+        <strong>Принцип Offline-First:</strong> Serbio работает в режиме офлайн по умолчанию. Уроки, викторины, тренажёры сербской кириллицы (Азбука) и падежей (Padeži), озвучка Бранко и прогресс доступны на 100% без интернета и без создания аккаунта.
+      </div>
+
+      <h2>2. Какие данные мы обрабатываем</h2>
       <ul>
-        <li><strong>Данные учетной записи (необязательно):</strong> Если вы решите зарегистрироваться для резервного копирования в облаке, мы собираем ваш адрес электронной почты и имя пользователя через Supabase для синхронизации очков опыта (XP), серий дней и пройденных уроков между устройствами.</li>
-        <li><strong>Прогресс обучения:</strong> Пройденные уроки, ошибки и статистика словарного запаса хранятся локально на вашем устройстве (AsyncStorage).</li>
-        <li><strong>Микрофон и аудиозапись:</strong> <span class="badge-check">Нет доступа</span> <strong>Приложение НЕ записывает звук и НЕ передает ваш голос.</strong> В приложении нет обязательных разрешений на микрофон. Все аудиозаписи сербских слов и фраз воспроизводятся непосредственно из встроенных локальных файлов.</li>
-        <li><strong>Фоновые процессы:</strong> Приложение не выполняет фоновое воспроизведение звука и не отслеживает местоположение в фоновом режиме.</li>
+        <li><strong>Локальное хранение на устройстве:</strong> Пройденные уроки, прогресс по словам, азбуке и падежам, XP, ударный режим, активные даты, заморозки серии, ежедневные задания, жизни, счётчик ИИ-кредитов, язык и алфавит, облик Бранко, настройки напоминаний и случайный анонимный ID устройства хранятся локально в <code>@react-native-async-storage/async-storage</code>.</li>
+        <li><strong>Дополнительный аккаунт, друзья и рейтинги (Supabase):</strong> При регистрации или входе через Email/пароль или Google (OAuth) ваш <strong>email</strong> используется исключительно для входа и восстановления доступа (публично не отображается; для Google-аккаунтов автоматически создаётся нейтральное временное имя вида <code>tanulo_...</code>). Выбранный <code>@username</code>, отображаемое имя, облик Бранко, общий и недельный XP, серия и статус PRO видны другим пользователям в рейтингах и списке друзей. Уроки, слова, активные даты, дневная цель и дружба синхронизируются с Supabase Postgres.</li>
+        <li><strong>Микрофон и распознавание речи:</strong> В Serbio есть <strong>необязательные упражнения на произношение</strong> с использованием встроенного распознавания речи (<code>expo-speech-recognition</code>: Android SpeechRecognizer / iOS SFSpeechRecognizer). Разрешение на микрофон и распознавание речи запрашивается <strong>только при нажатии кнопки микрофона</strong>; такие задания можно пропустить или отключить в любой момент. <strong>Serbio не записывает, не сохраняет и не загружает аудиозаписи вашего голоса.</strong> Распознавание речи выполняется временно системным провайдером ОС (Google/Apple согласно их политикам) для локальной оценки произношения. Фоновая запись звука отключена.</li>
+        <li><strong>ИИ-объяснения и диалоги (Google Gemini через прокси):</strong> Пояснения грамматики и ролевые диалоги работают на Google Gemini Flash Lite через защищённый прокси Supabase Edge Function (<code>gemini-proxy</code>). Передаются только текст задания/сообщения, краткий контекст диалога и выбранный язык интерфейса. Прокси временно проверяет токен сессии или IP-адрес для авторизации и защиты от перегрузки; <strong>ваш email, реальное имя и профиль аккаунта не передаются в Google Gemini</strong>, а переписка не сохраняется на наших серверах. Пожалуйста, не вводите конфиденциальные личные данные в чаты. Без интернета работают встроенные офлайн-алгоритмы.</li>
+        <li><strong>Подписки и покупки (Serbio PRO):</strong> Оформление PRO (месяц, год, навсегда) выполняется через Google Play или Apple App Store и управляется сервисом RevenueCat. Serbio не получает доступ к данным вашей банковской карты. RevenueCat получает анонимный или Supabase ID пользователя и квитанцию магазина для проверки подписки; в Supabase хранятся только статус PRO, тип плана, срок действия и статус автопродления.</li>
+        <li><strong>Аналитика и журналы ошибок:</strong> Сервис <strong>PostHog</strong> (<code>us.i.posthog.com</code>) собирает статистику использования (открытия приложения, уроки, точность ответов, балл произношения/пропуск без аудио, тесты уровня, экран PRO, серии, оценка приложения, нажатия «Поделиться»); при входе в аккаунт события связываются с внутренним ID Supabase, <code>@username</code> и отображаемым именем (без email и пароля; сбрасываются при выходе). Технические предупреждения и ошибки (текст ошибки, категория, версия ОС/приложения, анонимный ID устройства и ID пользователя при входе) отправляются в таблицу <code>app_error_logs</code> в Supabase (офлайн буфер до 100 записей) для повышения стабильности.</li>
+        <li><strong>Уведомления и системная отправка:</strong> Напоминания об ударном режиме планируются на 100% локально (<code>expo-notifications</code>, без удалённого push-сервера). Приглашения используют системное меню «Поделиться».</li>
+        <li><strong>Без рекламы и продажи данных:</strong> В Serbio нет рекламных сетей, мы не продаём персональные данные и не запрашиваем доступ к геолокации (GPS), камере, фотографиям или контактам.</li>
       </ul>
 
-      <h2>3. Сторонние интеграции</h2>
-      <p>Мы работаем исключительно с надежными сервисами, соответствующими стандартам GDPR:</p>
-      <ul>
-        <li><strong>Supabase:</strong> Зашифрованная база данных и аутентификация с защитой на уровне строк (Row-Level Security, RLS).</li>
-        <li><strong>Google AI (Gemini Flash):</strong> Интеллектуальные объяснения грамматики и ситуационные диалоги (обрабатывает только текст задания, без передачи личных данных пользователя).</li>
-        <li><strong>Expo / EAS:</strong> Доставка обновлений фреймворка и стабильность сборки.</li>
-      </ul>
+      <h2>3. Сторонние сервисы</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Сервис</th>
+              <th>Назначение</th>
+              <th>Обрабатываемые данные</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Supabase</strong></td>
+              <td>Аутентификация, БД Postgres (RLS), ИИ-прокси, логи ошибок</td>
+              <td>Email (вход), профиль и прогресс, друзья, статус PRO, отчёты об ошибках, проверка лимитов прокси</td>
+            </tr>
+            <tr>
+              <td><strong>Google LLC</strong></td>
+              <td>Вход Google, Gemini ИИ (через прокси), Google Play, распознавание речи Android</td>
+              <td>OAuth ID/email, текст упражнений/чата (без PII аккаунта), чеки покупок, временное распознавание речи</td>
+            </tr>
+            <tr>
+              <td><strong>RevenueCat</strong></td>
+              <td>Управление правами подписки</td>
+              <td>Анонимный или Supabase ID, чеки и статус покупок</td>
+            </tr>
+            <tr>
+              <td><strong>PostHog</strong></td>
+              <td>Продуктовая аналитика</td>
+              <td>События воронки, при входе — внутренний ID, username и имя</td>
+            </tr>
+            <tr>
+              <td><strong>Expo / EAS</strong></td>
+              <td>Сборка и обновления по воздуху (OTA)</td>
+              <td>Версия среды выполнения и платформа при проверке обновлений</td>
+            </tr>
+            <tr>
+              <td><strong>Apple Inc.</strong></td>
+              <td>Оплата в App Store и SFSpeechRecognizer (для iOS)</td>
+              <td>Проверка покупок, временное распознавание речи</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2>4. Хранение и безопасность данных</h2>
-      <p>Локальные данные хранятся в изолированном каталоге приложения на вашем устройстве. Передача данных защищена протоколом шифрования TLS 1.3. Мы никогда не продаем и не передаем ваши данные рекламным сетям или брокерам данных.</p>
+      <h2>4. Безопасность, хранение и права (GDPR)</h2>
+      <p>Весь сетевой обмен защищён шифрованием HTTPS/TLS, а облачные таблицы защищены политиками Supabase Row-Level Security (RLS). Данные аккаунта хранятся до его удаления; логи ошибок и аналитика хранятся только столько, сколько нужно для поддержки и улучшения приложения. Вы можете запросить доступ, исправление, удаление или экспорт данных по адресу <code>learnserbianwithbranko@gmail.com</code>.</p>
 
       <h2>5. Удаление аккаунта и данных</h2>
-      <p>Вы имеете полное право в любой момент запросить удаление аккаунта и всех связанных с ним данных непосредственно в настройках Профиля или написав разработчику по указанному ниже адресу электронной почты.</p>
+      <p>Вы можете навсегда удалить аккаунт и облачные данные в приложении: <strong>Профиль → Настройки → Удалить аккаунт навсегда</strong> (мгновенно удаляет учётную запись, профиль, прогресс, рейтинг и друзей) либо отправив запрос с зарегистрированного email на <code>learnserbianwithbranko@gmail.com</code> (обработка в течение 30 дней).</p>
+      <div class="notice-box">
+        <strong>Важно о подписке:</strong> Удаление аккаунта Serbio <strong>не отменяет автоматически</strong> активную подписку Google Play или App Store. Отмените автопродление в настройках подписок Google Play или Apple App Store.
+      </div>
 
-      <h2>6. Контакты</h2>
-      <p>По любым вопросам конфиденциальности вы можете связаться с разработчиком:<br>
-      <strong>Разработчик:</strong> meszkee<br>
-      <strong>Email:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
-    </div>
+      <h2>6. Конфиденциальность детей</h2>
+      <p>Приложение Serbio не предназначено для детей младше 13 лет (или младше 16 лет в странах ЕЭЗ без согласия родителей). Мы не собираем осознанно персональные данные детей. Если ребёнок предоставил свои данные, напишите на <code>learnserbianwithbranko@gmail.com</code>, и мы незамедлительно удалим их.</p>
 
-    <!-- ========================================== -->
-    <!-- 4. TERMS OF SERVICE - ENGLISH              -->
-    <!-- ========================================== -->
-    <div id="terms-en" class="doc-section">
-      <h2>1. Acceptance of Terms</h2>
-      <p>By downloading, installing, or using the <strong>Serbio</strong> mobile application, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the application.</p>
+      <h2>7. Контакты</h2>
+      <p>По всем вопросам конфиденциальности обращайтесь к разработчику (<strong>meszkee</strong>):<br>
+      <strong>Email:</strong> <code>learnserbianwithbranko@gmail.com</code></p>
+    </section>
 
-      <h2>2. Description of Service</h2>
-      <p>Serbio is a gamified language learning mobile application designed to help users learn the Serbian language (Cyrillic and Latin scripts). Core educational content is provided for personal, non-commercial educational use.</p>
+    <hr class="divider">
 
-      <h2>3. Intellectual Property Rights</h2>
-      <p>All curriculum content, vocabulary databases, character designs (including "Branko the Bear"), graphics, illustrations, and proprietary source code are the intellectual property of the developer (meszkee) and are protected by applicable copyright and trademark laws.</p>
+    <!-- TERMS OF SERVICE SECTION -->
+    <section id="terms">
+      <span class="section-kicker">Terms of Service &nbsp;/&nbsp; ÁSZF &nbsp;/&nbsp; Условия использования</span>
 
-      <h2>4. Subscriptions & In-App Purchases (Serbio PRO)</h2>
+      <h2>Terms of Service (English)</h2>
+      <p><strong>Effective Date:</strong> November 24, 2026. By using <strong>Serbio</strong>, you agree to these terms:</p>
       <ul>
-        <li><strong>Free Tier:</strong> Serbio provides extensive offline access to lessons, dictionary, and quizzes at no cost.</li>
-        <li><strong>Optional PRO Subscription:</strong> Users may choose to upgrade to Serbio PRO for premium features (e.g., advanced AI conversational simulations, detailed AI grammar breakdowns, exclusive mascot skins).</li>
-        <li><strong>Billing & Cancellation:</strong> Subscriptions are processed through the Google Play Store billing platform. You may cancel your subscription at any time via your Google Play Account Settings. Upon cancellation, you retain PRO benefits until the end of your current billing cycle.</li>
+        <li><strong>Educational License &amp; Acceptable Use:</strong> Serbio grants you a personal, non-exclusive, revocable license for language learning. You may not scrape, reverse-engineer, or abuse the AI proxy or backend APIs, or use offensive or impersonating usernames.</li>
+        <li><strong>Serbio PRO Subscriptions:</strong> Optional paid plans (monthly, annual, lifetime) are processed via Google Play or Apple App Store. Auto-renewing plans renew automatically unless canceled at least 24 hours before renewal (or trial end) in your store subscription settings. Deleting your account does not cancel a store subscription. Refunds follow Google Play / Apple App Store policies.</li>
+        <li><strong>AI Content Disclaimer:</strong> AI grammar explanations and roleplay replies are automated educational aids and may occasionally contain errors.</li>
+        <li><strong>Intellectual Property &amp; Liability:</strong> All original curriculum materials, Branko mascot assets, audio clips, and app code belong to <strong>meszkee</strong>. Serbio is provided "as is" without warranties, and to the extent permitted by law we are not liable for indirect damages or un-synced local data loss.</li>
+        <li><strong>Contact:</strong> Questions regarding these Terms may be sent to <code>learnserbianwithbranko@gmail.com</code>.</li>
       </ul>
 
-      <h2>5. Disclaimer of Warranties</h2>
-      <p>Serbio is provided on an "AS IS" and "AS AVAILABLE" basis. While we strive for absolute linguistic accuracy and technical stability, we do not guarantee that the service will be entirely error-free or uninterrupted.</p>
-
-      <h2>6. Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law, the developer shall not be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the application.</p>
-
-      <h2>7. Changes to Terms</h2>
-      <p>We reserve the right to modify these Terms of Service at any time. Continued use of the application following any changes constitutes acceptance of the updated terms.</p>
-
-      <h2>8. Contact Information</h2>
-      <p>For questions regarding these Terms of Service, please contact:<br>
-      <strong>Email:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
-    </div>
-
-    <!-- ========================================== -->
-    <!-- 5. TERMS OF SERVICE - MAGYAR               -->
-    <!-- ========================================== -->
-    <div id="terms-hu" class="doc-section">
-      <h2>1. A Feltételek Elfogadása</h2>
-      <p>A <strong>Serbio</strong> mobilalkalmazás letöltésével, telepítésével és használatával elfogadod a jelen Felhasználási Feltételeket (ÁSZF). Amennyiben a feltételekkel nem értesz egyet, kérjük, mellőzd az applikáció használatát.</p>
-
-      <h2>2. A Szolgáltatás Leírása</h2>
-      <p>A Serbio egy játékosított szerb nyelvtanuló alkalmazás (A1–B2 szint, cirill és latin írásmód támogatással). Az alapvető tananyag magáncélú, oktatási célú használatra szolgál.</p>
-
-      <h2>3. Szellemi Tulajdonjogok</h2>
-      <p>A teljes tantervi tartalom, a szótár adatbázisa, a grafikai elemek, a kabalafigura (Branko, a tanulótárs maci) és a szoftver forráskódja a fejlesztő (meszkee) kizárólagos szellemi tulajdonát képezik.</p>
-
-      <h2>4. Előfizetések és Vásárlások (Serbio PRO)</h2>
+      <h2>Felhasználási Feltételek — ÁSZF (Magyar)</h2>
+      <p><strong>Hatályos:</strong> 2026. november 24. A <strong>Serbio</strong> alkalmazás használatával elfogadod az alábbi feltételeket:</p>
       <ul>
-        <li><strong>Ingyenes Alapverzió:</strong> A Serbio a tananyag és a szótár túlnyomó részét ingyenesen, offline módon elérhetővé teszi.</li>
-        <li><strong>Serbio PRO tagság:</strong> Választható prémium tagság, amely kényelmi és MI-funkciókat biztosít (AI szituációs chat, részletes nyelvtani magyarázatok, egyedi kabala kinézetek).</li>
-        <li><strong>Számlázás és Lemondás:</strong> Az előfizetések lebonyolítása a hivatalos Google Play Áruház rendszerén keresztül történik. Az előfizetés bármikor, kötelezettség nélkül lemondható a Google Play Fiók / Előfizetések menüpontban. Lemondás esetén a prémium funkciók a kifizetett időszak végéig aktívak maradnak.</li>
+        <li><strong>Használati engedély és rendeltetésszerű használat:</strong> A Serbio személyes, nem kizárólagos nyelvtanulási használati jogot biztosít. Tilos az AI proxy vagy a háttér-API-k visszaélésszerű terhelése, automatizált adatgyűjtése, illetve sértő vagy mások nevével visszaélő felhasználónevek használata.</li>
+        <li><strong>Serbio PRO előfizetések:</strong> A havi, éves vagy örökös csomagok számlázása a Google Play vagy Apple App Store rendszerén át történik. A megújuló előfizetések automatikusan meghosszabbodnak, ha nem mondod le őket legalább 24 órával a fordulónap (vagy próbaidőszak) előtt az áruház előfizetés-beállításaiban. A fiók törlése nem szünteti meg az áruházi előfizetést. A visszatérítésekre a Google Play / App Store szabályzata irányadó.</li>
+        <li><strong>AI tartalmak:</strong> Az AI alapú nyelvtani magyarázatok és szituációs válaszok automatikusan generált tanulási segédletek, amelyek kivételesen pontatlanságot is tartalmazhatnak.</li>
+        <li><strong>Szerzői jog és felelősség:</strong> A tananyag, a Branko kabala grafikák, a hanganyagok és a szoftver a fejlesztő (<strong>meszkee</strong>) szellemi tulajdonát képezik. Az alkalmazást „jelenlegi állapotában” biztosítjuk; a jogszabályok által megengedett mértékig nem vállalunk felelősséget közvetett károkért vagy felhőszinkron nélküli helyi adatvesztésért.</li>
+        <li><strong>Kapcsolat:</strong> Feltételekkel kapcsolatos kérdések: <code>learnserbianwithbranko@gmail.com</code>.</li>
       </ul>
 
-      <h2>5. Felelősségkorlátozás</h2>
-      <p>Az alkalmazás oktatási segédeszköz. Noha mindent megteszünk a pontos nyelvtani adatok és a folyamatos működés biztosításáért, nem vállalunk felelősséget az esetleges technikai hibákból vagy hálózati kimaradásokból eredő kellemetlenségekért.</p>
-
-      <h2>6. Kapcsolat</h2>
-      <p>Felhasználási feltételekkel kapcsolatos kérdésekben elérhetsz minket:<br>
-      <strong>E-mail:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
-    </div>
-
-    <!-- ========================================== -->
-    <!-- 6. TERMS OF SERVICE - РУССКИЙ              -->
-    <!-- ========================================== -->
-    <div id="terms-ru" class="doc-section">
-      <h2>1. Принятие условий</h2>
-      <p>Загружая, устанавливая или используя мобильное приложение <strong>Serbio</strong>, вы соглашаетесь с настоящими Условиями использования. Если вы не согласны с данными условиями, пожалуйста, воздержитесь от использования приложения.</p>
-
-      <h2>2. Описание услуги</h2>
-      <p>Serbio — это игровое мобильное приложение для изучения сербского языка (уровни A1–B2, поддержка кириллицы и латиницы). Образовательный контент предоставляется для личного некоммерческого использования.</p>
-
-      <h2>3. Интеллектуальная собственность</h2>
-      <p>Все учебные материалы, словарная база, графические элементы, талисман («Медвежонок Бранко») и программный код являются интеллектуальной собственностью разработчика (meszkee) и защищены законами об авторском праве.</p>
-
-      <h2>4. Подписки и покупки в приложении (Serbio PRO)</h2>
+      <h2>Условия использования (Русский)</h2>
+      <p><strong>Действуют с:</strong> 24 ноября 2026 г. Используя приложение <strong>Serbio</strong>, вы соглашаетесь с настоящими условиями:</p>
       <ul>
-        <li><strong>Бесплатная версия:</strong> Serbio предоставляет доступ к основным урокам, словарю и упражнениям совершенно бесплатно и офлайн.</li>
-        <li><strong>Подписка Serbio PRO:</strong> Дополнительная премиум-подписка с расширенными возможностями (ситуационный ИИ-чат, подробные грамматические разборы, уникальные скины для Бранко).</li>
-        <li><strong>Оплата и отмена:</strong> Подписки обрабатываются через платежную систему Google Play. Вы можете отменить подписку в любое время в настройках аккаунта Google Play. При отмене доступ к функциям PRO сохраняется до конца текущего оплаченного периода.</li>
+        <li><strong>Лицензия и правила использования:</strong> Serbio предоставляет личную неисключительную лицензию для изучения языка. Запрещается злоупотреблять ИИ-прокси или API, осуществлять автоматический сбор данных и использовать оскорбительные имена пользователей.</li>
+        <li><strong>Подписки Serbio PRO:</strong> Оплата планов (месяц, год, навсегда) проводится через Google Play или Apple App Store. Подписки продлеваются автоматически, если не отменить их минимум за 24 часа до окончания периода (или пробного периода) в настройках магазина. Удаление аккаунта не отменяет подписку в магазине; возвраты регулируются правилами Google Play / App Store.</li>
+        <li><strong>Дисклеймер об ИИ:</strong> ИИ-объяснения и диалоги создаются автоматически в учебных целях и иногда могут содержать неточности.</li>
+        <li><strong>Интеллектуальная собственность и ответственность:</strong> Учебные материалы, персонаж Бранко, аудио и код принадлежат <strong>meszkee</strong>. Приложение предоставляется «как есть»; в рамках закона разработчик не несёт ответственности за косвенные убытки или потерю несинхронизированных локальных данных.</li>
+        <li><strong>Контакты:</strong> По вопросам условий пишите на <code>learnserbianwithbranko@gmail.com</code>.</li>
       </ul>
-
-      <h2>5. Ограничение ответственности</h2>
-      <p>Приложение является образовательным инструментом. Мы стремимся к наивысшей грамматической точности и стабильности, однако не несем ответственности за возможные технические сбои или ошибки.</p>
-
-      <h2>6. Контакты</h2>
-      <p>По вопросам условий использования свяжитесь с нами:<br>
-      <strong>Email:</strong> <a href="mailto:learnserbianwithbranko@gmail.com">learnserbianwithbranko@gmail.com</a></p>
-    </div>
+    </section>
 
     <footer>
-      &copy; 2026 Serbio — Tanulj Szerbül. Minden jog fenntartva. | All rights reserved. | Все права защищены.
+      &copy; 2026 Serbio — Tanulj Szerbül (meszkee). All rights reserved. &nbsp;|&nbsp; <code>learnserbianwithbranko@gmail.com</code>
     </footer>
   </div>
-
-  <script>
-    let currentDoc = 'privacy';
-    let currentLang = 'en';
-
-    function updateView() {
-      // Hide all sections
-      const sections = document.querySelectorAll('.doc-section');
-      sections.forEach(sec => sec.classList.remove('active'));
-
-      // Show selected section
-      const activeId = `${currentDoc}-${currentLang}`;
-      const target = document.getElementById(activeId);
-      if (target) {
-        target.classList.add('active');
-      }
-
-      // Update Tab Buttons
-      const tabPrivacy = document.getElementById('tab-privacy-btn');
-      const tabTerms = document.getElementById('tab-terms-btn');
-      tabPrivacy.classList.toggle('active', currentDoc === 'privacy');
-      tabTerms.classList.toggle('active', currentDoc === 'terms');
-
-      // Update Tab Labels based on language
-      if (currentLang === 'hu') {
-        tabPrivacy.textContent = '🔒 Adatvédelem';
-        tabTerms.textContent = '📜 ÁSZF';
-      } else if (currentLang === 'ru') {
-        tabPrivacy.textContent = '🔒 Конфиденциальность';
-        tabTerms.textContent = '📜 Условия использования';
-      } else {
-        tabPrivacy.textContent = '🔒 Privacy Policy';
-        tabTerms.textContent = '📜 Terms of Service';
-      }
-
-      // Update Lang Buttons
-      document.getElementById('lang-en-btn').classList.toggle('active', currentLang === 'en');
-      document.getElementById('lang-hu-btn').classList.toggle('active', currentLang === 'hu');
-      document.getElementById('lang-ru-btn').classList.toggle('active', currentLang === 'ru');
-
-      // Update Header Text based on language & doc
-      const titleEl = document.getElementById('page-title');
-      const updatedEl = document.getElementById('last-updated-text');
-      
-      if (currentLang === 'hu') {
-        titleEl.textContent = currentDoc === 'privacy' ? 'Adatvédelmi Nyilatkozat' : 'Felhasználási Feltételek (ÁSZF)';
-        updatedEl.textContent = 'Hatályos: 2026. október';
-      } else if (currentLang === 'ru') {
-        titleEl.textContent = currentDoc === 'privacy' ? 'Политика конфиденциальности' : 'Условия использования';
-        updatedEl.textContent = 'Дата вступления в силу: октябрь 2026 г.';
-      } else {
-        titleEl.textContent = currentDoc === 'privacy' ? 'Privacy Policy' : 'Terms of Service';
-        updatedEl.textContent = 'Effective Date: October 2026';
-      }
-    }
-
-    function switchDoc(docType) {
-      currentDoc = docType;
-      window.location.hash = docType;
-      updateView();
-    }
-
-    function switchLang(lang) {
-      currentLang = lang;
-      updateView();
-    }
-
-    // Handle direct anchor links (#terms, #privacy)
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash.toLowerCase().replace('#', '');
-      if (hash === 'terms' || hash === 'aszf' || hash === 'usloviya') {
-        currentDoc = 'terms';
-      } else {
-        currentDoc = 'privacy';
-      }
-      
-      // Auto-detect browser language
-      const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      if (userLang.startsWith('hu')) {
-        currentLang = 'hu';
-      } else if (userLang.startsWith('ru')) {
-        currentLang = 'ru';
-      }
-      
-      updateView();
-    });
-  </script>
 </body>
 </html>
